@@ -2,10 +2,12 @@ import spacy
 from typing import List
 from spacy.tokens import Doc, Span
 from fastcoref import FCoref
+#from fastcoref import LingMessCoref
 from flask import Flask, render_template, request, redirect, session, jsonify
 
 nlp = spacy.load('en_core_web_sm')
 model = FCoref()
+#model = LingMessCoref(device='cuda:0')
 app = Flask(__name__)
 
 def core_logic_part(document: Doc, coref: List[int], resolved: List[str], mention_span: Span):
