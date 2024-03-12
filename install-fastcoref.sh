@@ -18,7 +18,7 @@ pip install -U spacy
 python -m spacy download en_core_web_sm
 pip install fastcoref
 pip install flask
-pm2 start python fastcoref_rest_endpoint.py
+pm2 start python fastcoref_rest_endpoint.py --name fastcoref
 deactivate
 
 
