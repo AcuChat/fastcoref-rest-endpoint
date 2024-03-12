@@ -46,6 +46,10 @@ chmod +x *.sh
 
 ./install-fastcoref.sh
 
+## You can now access your endpoint via a POST request
+
+
+
 
 
 

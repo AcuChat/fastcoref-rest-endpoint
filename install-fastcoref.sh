@@ -1,4 +1,12 @@
 #!/bin/bash
+
+# install venv
+sudo DEBIAN_FRONTEND="noninteractive" apt -y --assume-yes update
+sudo DEBIAN_FRONTEND="noninteractive" apt -y --assume-yes upgrade
+DEBIAN_FRONTEND="noninteractive" apt -y --assume-yes install python3-pip
+DEBIAN_FRONTEND="noninteractive" apt -y --assume-yes install python3-venv
+
+# install fastcoref
 ufw allow 5005/tcp
 mkdir -p /home/nlpkit/python/services/fastcoref
 cp fastcoref_rest_endpoint.py /home/nlpkit/python/services/fastcoref/
